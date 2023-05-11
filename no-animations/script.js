@@ -16,7 +16,7 @@ async function validate() {
         console.log("HAIIII");
         //alert("haiiii! =^-^=");
         await sleep(100);
-        window.location.href="homepage.html"; 
+        window.location.href="../homepage/homepage.html"; 
     }
 }
 

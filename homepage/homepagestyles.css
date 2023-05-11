@@ -1,0 +1,107 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: white;
+    margin: 0%;
+    padding: 0%;
+}
+#content {
+    min-width: 500px;
+    width: 600px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: none;
+    padding: 1rem;
+    outline: 1px solid #CCC;
+    border-radius: 0px 0px 20px 20px;
+}
+.imgContainer img, .imgContainer  {
+    max-width: 64px;
+    max-height: 64px;
+    border-radius: 100%;
+}
+.post {
+    min-width: 400px;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: #DDD;
+}
+.textContainer {
+    margin-left: 1rem;
+    width: 100%;
+}
+.postButtonContainer {
+    float: right;
+}
+.handleContainer {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+
+}
+.trash-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(100, 100, 100);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .trash-button:hover {
+    width: 100px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+  }
+  
+  .trash-button:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+  }
+  
+  .trash-button::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+  }
+  
+  .trash-button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+  }
+
+.end {
+    margin-top: 4rem;
+    color: grey;
+}
