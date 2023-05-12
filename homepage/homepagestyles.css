@@ -116,7 +116,7 @@ body {
 .sidebar {
     width: 150px;
     height: 100%;
-    background-color: rgba(0, 45, 182, 0.3);
+    background-color: #36f;
     padding: 20px;
     border-radius: 10% 0% 0% 10%;
     border-right-style:none;

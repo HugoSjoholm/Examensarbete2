@@ -76,11 +76,14 @@ fetch('posts/')
   async function loopThroughFilesInDirectory(dirPath) {
     // Make a GET request to retrieve the list of files in the directory
     const response = await fetch(dirPath);
-    const files = await response.json();
-  
+    console.log("reached here");
+    let files = await response;
+    console.log(files);
+    files = files.json();
     // Initialize an array to store file paths
     const filePaths = [];
-  
+    console.log("reached here 2 ");
+
     // Loop through all files
     for (let i = 0; i < files.length; i++) {
       const file = files[i];
