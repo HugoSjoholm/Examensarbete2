@@ -165,3 +165,36 @@ nav {
     background-color: #36f;
     width: 100%;
 }
+#writePost {
+        min-width: 400px;
+        min-height: 120px;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem;
+        border-radius: 10px;
+        background-color: #EEE;
+        outline: solid 0px #36f;
+        margin-bottom: 1rem;
+}
+#writePost textarea {
+    width: 91%;
+    height: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+}
+#writePost button {
+    width: 75px;
+    height: 35px;
+    border-radius: 20px;
+    border-color: transparent;
+    background-color: #36f;
+    color: white;
+    float: right;
+    margin-right: 22px;
+}
+#writePost button:hover {
+    font-weight: bolder;
+}
