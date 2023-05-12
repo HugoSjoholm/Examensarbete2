@@ -15,6 +15,7 @@ body {
     border-top-style: none;
     background-color: white;
     border-radius: 0px 0px 20px 20px;
+    margin-bottom: 10rem;
 }
 .imgContainer img, .imgContainer  {
     max-width: 64px;
@@ -29,10 +30,14 @@ body {
     border-radius: 10px;
     background-color: #EEE;
     outline: solid 0px #36f;
+    margin-bottom: 1rem;
+    cursor: move;
 }
 .textContainer {
     margin-left: 1rem;
     width: 100%;
+    overflow: hidden;
+    padding: 2px;
 }
 .postButtonContainer {
     float: right;
@@ -103,7 +108,7 @@ body {
     transition-duration: .3s;
   }
 
-.end {
+#end {
     margin-top: 4rem;
     color: rgba(51,102,255,0.25);;
 }
