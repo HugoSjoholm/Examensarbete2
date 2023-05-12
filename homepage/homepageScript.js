@@ -78,6 +78,15 @@ async function sleep(ms) {
 
 
 laodPosts();
+document.addEventListener("mousemove", logKey);
+let xPos = 0;
+let yPos = 0;
+
+function logKey(e) {
+  xPos = e.screenX;
+  yPos = e.screenY;
+ console.log(`${e.screenX}, ${e.screenY}`);
+}
 
 function makeDraggable() {
   
@@ -85,21 +94,24 @@ function makeDraggable() {
   for (let myElement of allPosts) {
     myElement.addEventListener('dragstart', (event) => {
       event.dataTransfer.setData('text/plain', event.target.id);
-      const draggedElement = event.target;
-      const x = event.clientX;
-      const y = event.clientY;
-      draggedElement.style.transform = `translate(${x}px, ${y}px)`;
+
     });
     
     myElement.addEventListener('drag', (event) => {
+      console.log("WHEEEE!!");
       const draggedElement = event.target;
       const x = event.clientX;
       const y = event.clientY;
-      draggedElement.style.transform = `translate(${x}px, ${y}px)`;
+      draggedElement.style.transform = `translate(${xPos}px, ${yPos}px)`;
     });
     
     myElement.addEventListener('dragend', (event) => {
-      // do something when element is dropped
+            console.log("oop");
+      const draggedElement = event.target;
+      const x = event.clientX;
+      const y = event.clientY;
+      draggedElement.style.transform = `translate(${xPos}px, ${yPos}px)`;
+      console.log(`${xPos}px ${yPos}px`);
     });
   }
 
