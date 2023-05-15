@@ -51,7 +51,7 @@ function savePost(obj) {
       laodPosts();
 
 
-    }, 2000);
+    }, 1000);
     
 
 
@@ -75,7 +75,7 @@ function laodPosts() {
   // Loop through the elements and set the animation delay
   for (var i = 0; i < elements.length; i++) {
     // Set the animation delay to the index multiplied by a delay factor
-    elements[i].style.animationDelay = i * 0.1 + 's';
+    elements[i].style.animationDelay = i * 0.19 + 's';
   }
 }
 
