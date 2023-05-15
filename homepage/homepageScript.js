@@ -12,35 +12,46 @@ function clear() {
 }
 
 function savePost(obj) {
-    wipePosts()
-    const data = localStorage.getItem('posts');
-    const parent = obj.parentNode.parentNode;
-    const myTextarea = parent.querySelector('textarea').value;
 
-    console.log(myTextarea.value);
-    new Date().getTime()
-    let html =             
-    `<div draggable="true" class="post">`+
-    `  <div class="imgContainer">`+
-    `      <img src="posts/1.png" alt="" srcset="">`+
-    `  </div>`+
-    `  <div class="textContainer">`+
-    `      <div class="handleContainer">`+
-    `          <span class="userName">@asterix_the_king</span>`+
-    `          <button class="trash-button">`+
-    `              <svg class="svgIcon" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>`+
-    `          </button>`+
-    `      </div>`+
-    `      <span class="postText">`+
-    `          ${myTextarea}`+
-    `      </span>`+
-    `  </div>`+
-    `</div>`;
-    sleep(500);
+    console.log('saving');
 
-    localStorage.setItem('posts', html + data)
+    setTimeout(function() {
+      wipePosts()
+      const data = localStorage.getItem('posts');
+      const parent = obj.parentNode.parentNode;
+      const myTextarea = parent.querySelector('textarea').value;
+  
+      console.log(myTextarea.value);
+      new Date().getTime()
+      let html =             
+      `<div class="post">`+
+      `  <div class="imgContainer">`+
+      `      <img src="posts/1.png" alt="" srcset="">`+
+      `  </div>`+
+      `  <div class="textContainer">`+
+      `      <div class="handleContainer">`+
+      `          <span class="userName">@asterix_the_king</span>`+
+      `          <button class="trash-button">`+
+      `              <svg class="svgIcon" viewBox="0 0 448 512"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>`+
+      `          </button>`+
+      `      </div>`+
+      `      <span class="postText">`+
+      `          ${myTextarea}`+
+      `      </span>`+
+      `  </div>`+
+      `</div>`;
+      sleep(500);
+  
+      localStorage.setItem('posts', html + data)
+  
+      laodPosts();
 
-    laodPosts();
+
+    }, 1000);
+    
+
+
+    
 }
 
 
@@ -50,17 +61,25 @@ function laodPosts() {
   
   let content = document.getElementById('content');
   let html = localStorage.getItem('posts') + '<div id="end"><h1>Hmm.... Här tog det slut med posts</h1></div>';
-  console.log(html)
+  //console.log(html)
   sleep(100);
   content.innerHTML += html;
 
   makeDraggable();
+  
+  var elements = document.getElementsByClassName('post');
+
+  // Loop through the elements and set the animation delay
+  for (var i = 0; i < elements.length; i++) {
+    // Set the animation delay to the index multiplied by a delay factor
+    elements[i].style.animationDelay = i * 0.1 + 's';
+  }
 }
 
 function wipePosts() {
   let allPosts = [];
   allPosts = document.getElementsByClassName('post');
-  console.log(allPosts)
+  //console.log(allPosts)
   for (let item of allPosts) {
     item.remove();
   }
@@ -85,7 +104,7 @@ let yPos = 0;
 function logKey(e) {
   xPos = e.screenX;
   yPos = e.screenY;
- console.log(`${e.screenX}, ${e.screenY}`);
+ //console.log(`${e.screenX}, ${e.screenY}`);
 }
 
 function makeDraggable() {
@@ -116,4 +135,5 @@ function makeDraggable() {
   }
 
 }
+
 
