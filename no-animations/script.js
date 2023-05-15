@@ -12,7 +12,7 @@ async function validate() {
         document.getElementById("centerContianer").style.boxShadow = "20px 20px 60px #850000, -20px -20px 60px #ff5252"; 
     }
     else {
-
+        localStorage.setItem("username", x);
         console.log("HAIIII");
         //alert("haiiii! =^-^=");
         await sleep(20);
