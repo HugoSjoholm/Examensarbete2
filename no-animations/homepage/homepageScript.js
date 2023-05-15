@@ -17,7 +17,7 @@ function savePost(obj) {
     
     document.getElementById('loadingContainer').style.display = 'block';
 
-    setTimeout(function() {
+
       document.getElementById('loadingContainer').style.display = 'none';
       wipePosts()
       const data = localStorage.getItem('posts');
@@ -51,7 +51,6 @@ function savePost(obj) {
       laodPosts();
 
 
-    }, 2000);
     
 
 
