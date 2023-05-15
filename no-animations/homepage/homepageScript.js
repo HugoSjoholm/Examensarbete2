@@ -1,6 +1,6 @@
 sleep(100)
 function logout() {
-    window.location.href = "/no-animations/index.html"
+    window.location.href = "../"
 }
 
 function clear() {
