@@ -16,9 +16,15 @@ function savePost(obj) {
     console.log('saving');
     
     document.getElementById('loadingContainer').style.display = 'block';
-
+    document.getElementById('loadingContainer').style.opacity = '1';
+    document.getElementById('loadingContainer').style.top = '40%';
     setTimeout(function() {
       document.getElementById('loadingContainer').style.display = 'none';
+      document.getElementById('loadingContainer').style.opacity = '0';
+      
+      
+      document.getElementById('loadingContainer').style.top = '-400%';
+
       wipePosts()
       const data = localStorage.getItem('posts');
       const parent = obj.parentNode.parentNode;
@@ -51,7 +57,7 @@ function savePost(obj) {
       laodPosts();
 
 
-    }, 2000);
+    }, 4000);
     
 
 
@@ -75,7 +81,7 @@ function laodPosts() {
   // Loop through the elements and set the animation delay
   for (var i = 0; i < elements.length; i++) {
     // Set the animation delay to the index multiplied by a delay factor
-    elements[i].style.animationDelay = i * 0.1 + 's';
+    elements[i].style.animationDelay = i * 1 + 's';
   }
 }
 
