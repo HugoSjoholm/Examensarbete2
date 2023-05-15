@@ -184,6 +184,7 @@ a:hover {
 nav {
     background-color: #36f;
     width: 100%;
+    height: 2.5em;
 }
 #writePost {
         min-width: 400px;
@@ -214,9 +215,13 @@ nav {
     color: white;
     float: right;
     margin-right: 22px;
+    outline: white 1px solid;
+    transition: 0.2s;
 }
 #writePost button:hover {
-    font-weight: bolder;
+    font-weight: 900;
+    outline: blue 3px solid;
+
 }
 
 
@@ -258,3 +263,41 @@ nav {
     width: 400px;
 
 }
+
+
+#logoutButton {
+    margin: 5px;
+    width: 6em;
+    height: 2em;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    outline: white 0px solid;
+    transition: 0.2s;
+   }
+   
+   #logoutButton::before {
+    transform: translateX(-100%);
+    content: '';
+    width: 0;
+    height: 2em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-image: linear-gradient(to left, #36f 0%, #76f 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+   }
+   #logoutButton:hover {
+    outline: white 2px solid;
+    color: white;
+   }
+   #logoutButton:hover::before {
+    width: 9em;
+   }
