@@ -14,8 +14,11 @@ function clear() {
 function savePost(obj) {
 
     console.log('saving');
+    
+    document.getElementById('loadingContainer').style.display = 'block';
 
     setTimeout(function() {
+      document.getElementById('loadingContainer').style.display = 'none';
       wipePosts()
       const data = localStorage.getItem('posts');
       const parent = obj.parentNode.parentNode;
