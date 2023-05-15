@@ -8,7 +8,7 @@
     box-shadow:  20px 20px 60px #bebebe,
                  -20px -20px 60px #ffffff;
     padding: 1.5% 5% 5% 5%;
-    transition: 0.1s;
+    transition: 0s;
 }
 
 #centerContianer input {
@@ -17,7 +17,7 @@
     background: #e8e8e8;
     box-shadow: inset 2px 2px 20px rgb(220,220,220),
     inset -20px -20px 60px #ffffff;
-    transition: 0.3s;
+    transition: 0s;
     border: none;
     padding: 1rem;
     border-radius: 1rem;
@@ -51,7 +51,7 @@ button {
     border: none;
     border-radius: 45px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease 0s;
+    transition: all 0s ease 0s;
     cursor: pointer;
     outline: none;
   }
