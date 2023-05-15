@@ -69,7 +69,6 @@ function laodPosts() {
   sleep(100);
   content.innerHTML += html;
 
-  makeDraggable();
   
   var elements = document.getElementsByClassName('post');
 
