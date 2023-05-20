@@ -15,7 +15,7 @@ async function validate() {
         localStorage.setItem("username", x);
         console.log("HAIIII");
         //alert("haiiii! =^-^=");
-        await sleep(20);
+        await sleep(0);
         window.location.href="homepage/homepage.html"; 
     }
 }
