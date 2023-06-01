@@ -1,5 +1,5 @@
 # Study of ideal animation and transition lenght
-#About the project
+# About the project
 This is the reposotory for my end of perm project were in one week I built a incredibly simple socialmedia site and made three versions of it. 
 - No animation/transition lenghts (0s)
 - Balanced animation/transition lenghts (hand tailored but nothing more than 0.8s)
@@ -10,6 +10,6 @@ From this I was able to conclude that there is no perfect number for all transit
 
 Although this was apparent to someone that has some experience with UX, there was not any studies to reference with hard data so that's why I decided to perferom my own study. If you wish to test out the sites yourself and see what I can acomplish in two days roughly then please read below haha!
 
-#Download and ""Installation""
+# Download and ""Installation""
 This project was a very short one I only made static html and frontend, there is no backend as I didn't want to setup a database and a stack in 3 days. 
 You should be able to just clone the project and then poke around, maybe see how I managed to save posts with only JS and html ;)
